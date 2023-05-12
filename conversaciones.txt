@@ -21,6 +21,14 @@
     Fecha y hora: 2023-01-01 08:01:14
     
 
+    Mensaje 5:
+    Autor: agent/user
+    Texto: Necesito una consulta
+    Media: url-descarga
+    Tipo de media: img/audio
+    Fecha y hora: 2023-01-01 08:01:14
+    
+
     Mensaje 3:
     Autor: agent/user
     Texto: Para programar una cita
@@ -35,4 +43,65 @@
     Media: url-descarga
     Tipo de media: img/audio
     Fecha y hora: 2023-01-01 08:01:14
+    
+
+    Mensaje 6:
+    Autor: agent/user
+    Texto: Hola
+    Media: url-descarga
+    Tipo de media: img/audio
+    Fecha y hora: 2023-01-01 08:02:14
+    
+
+   Datos recibidos de la campaña :
+   rrhh_id 123
+   campaign_id 1
+   conversation_id xxkasdhasd-123asd-123123
+
+    Mensaje 1:
+    Autor: agent/user
+    Texto: Hola buen dia
+    Media: url-descarga
+    Tipo de media: img/audio
+    Fecha y hora: 2023-01-01 08:00:14
+    
+
+    Mensaje 2:
+    Autor: agent/user
+    Texto: Necesito una consulta
+    Media: url-descarga
+    Tipo de media: img/audio
+    Fecha y hora: 2023-01-01 08:01:14
+    
+
+    Mensaje 3:
+    Autor: agent/user
+    Texto: Para programar una cita
+    Media: url-descarga
+    Tipo de media: img/audio
+    Fecha y hora: 2023-01-01 08:02:14
+    
+
+    Mensaje 4:
+    Autor: agent/user
+    Texto: El dia tal
+    Media: url-descarga
+    Tipo de media: img/audio
+    Fecha y hora: 2023-01-01 08:01:14
+    
+
+    Mensaje 5:
+    Autor: agent/user
+    Texto: Necesito una consulta
+    Media: url-descarga
+    Tipo de media: img/audio
+    Fecha y hora: 2023-01-01 08:01:14
+    
+
+    Mensaje 6:
+    Autor: agent/user
+    Texto: Hola
+    Media: url-descarga
+    Tipo de media: img/audio
+    Fecha y hora: 2023-01-01 08:02:14
     
