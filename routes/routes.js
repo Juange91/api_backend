@@ -3,43 +3,37 @@ const express = require('express');
 const router = express.Router();
 const fs = require('fs');
 
-const conversacion = [];
-const atributos_conversacion = ['rrhh_id','campaign_id','conversation_id'];
-const atributos_mensajes = ['autor','text','media','media-type','fecha-hora'];
-
 router.post('/', (req, res) => {
-    const data = req.body
-    res.json(data);
-let data_result = JSON.stringify(data);
-let result  = JSON.parse(data_result);
+    const { rrhh_id, campaign_id, conversation_id, messages } = req.body
 
-conversacion[0] = result.rrhh_id;
-conversacion[1] = result.campaign_id;
-conversacion[2] = result.conversation_id;
-
-for (let i = 0; i < conversacion.length; i++) {
-    let msj = JSON.stringify(conversacion[i]) 
-    fs.appendFile('ejemplo.txt', `\n${atributos_conversacion[i]} : ${msj}` , (error) => {
-        if (error) {
-            console.log(error);
-        }
-    }) 
-}
-
-for (let i = 0; i < result.messages.length; i++) {
-
-    fs.appendFile('ejemplo.txt', 
+    fs.appendFile('ejemplo.txt',
    `\n
-   ${atributos_mensajes[0]} : ${result.messages[i].autor}
-   ${atributos_mensajes[1]} : ${result.messages[i].text}
-   ${atributos_mensajes[2]} : ${result.messages[i].media}
-   ${atributos_mensajes[3]} : ${result.messages[i].media_type}
-   ${atributos_mensajes[4]} : ${result.messages[i].fecha_hora}`
-    , (error) => {
-        if (error) {
-            console.log(error);
-        }
-    })
-}  
+   Datos recibidos de la campaña :
+   rrhh_id ${rrhh_id}
+   campaign_id ${campaign_id}
+   conversation_id ${conversation_id}`
+        , (error) => {
+            if (error) {
+                console.log(error);
+            }
+        })
+
+    messages.forEach((message, index) => {
+        fs.appendFile('ejemplo.txt',
+
+    `\n
+    Mensaje ${index + 1}:
+    Autor: ${message.autor}
+    Texto: ${message.text}
+    Media: ${message.media}
+    Tipo de media: ${message['media-type']}
+    Fecha y hora: ${message['fecha-hora']}
+    ` , (error) => {
+            if (error) {
+                console.log(error);
+            }
+        })
+    });
+
 })
 module.exports = router
