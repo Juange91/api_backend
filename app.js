@@ -5,6 +5,8 @@ app.use(express.json());
 
 const PORT = 3000;
 
+app.use('/', require('./routes/routes'));
+
 app.listen(PORT,(err) => {
 if (err) {
     console.log('Error en el servidor');
