@@ -6,7 +6,7 @@ const fs = require('fs');
 router.post('/', (req, res) => {
     const { rrhh_id, campaign_id, conversation_id, messages } = req.body
 
-    fs.appendFile('ejemplo.txt',
+    fs.appendFile('conversaciones.txt',
    `\n
    Datos recibidos de la campaña :
    rrhh_id ${rrhh_id}
@@ -19,7 +19,7 @@ router.post('/', (req, res) => {
         })
 
     messages.forEach((message, index) => {
-        fs.appendFile('ejemplo.txt',
+        fs.appendFile('conversaciones.txt',
 
     `\n
     Mensaje ${index + 1}:
