@@ -9,9 +9,9 @@ router.post('/', (req, res) => {
     fs.appendFile('conversaciones.txt',
    `\n
    Datos recibidos de la campaña :
-   rrhh_id ${rrhh_id}
-   campaign_id ${campaign_id}
-   conversation_id ${conversation_id}`
+   rrhh_id: ${rrhh_id}
+   campaign_id: ${campaign_id}
+   conversation_id: ${conversation_id}`
         , (error) => {
             if (error) {
                 console.log(error);
@@ -20,14 +20,15 @@ router.post('/', (req, res) => {
 
     messages.forEach((message, index) => {
         fs.appendFile('conversaciones.txt',
-    `\n
+    `
+    
     Mensaje ${index + 1}:
     Autor: ${message.autor}
     Texto: ${message.text}
     Media: ${message.media}
     Tipo de media: ${message['media-type']}
-    Fecha y hora: ${message['fecha-hora']}
-    ` , (error) => {
+    Fecha y hora: ${message['fecha-hora']}`
+     , (error) => {
             if (error) {
                 console.log(error);
             }
